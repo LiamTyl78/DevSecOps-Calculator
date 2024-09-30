@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="254.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="OneButton" layoutX="23.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="TwoButton" layoutX="78.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="2">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ThreeButton" layoutX="133.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="3">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="DivideButton" layoutX="188.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="➗" />
+      <Button fx:id="MultiplyButton" layoutX="188.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="✖" />
+      <Button fx:id="SubtractButton" layoutX="188.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="➖" />
+      <Button fx:id="PlusButton" layoutX="188.0" layoutY="315.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="➕" />
+      <Button fx:id="SixButton" layoutX="133.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="6">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="FiveButton" layoutX="78.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="5">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="FourButton" layoutX="23.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="4">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="SevenButton" layoutX="23.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="7">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="EightButton" layoutX="78.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="NineButton" layoutX="133.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="EqualsButton" layoutX="133.0" layoutY="315.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="=">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ZeroButton" layoutX="23.0" layoutY="315.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="98.0" text="0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Text fx:id="ResultLabel" layoutX="199.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text fx:id="OperationLabel" layoutX="196.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
