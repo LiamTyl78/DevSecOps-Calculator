@@ -5,72 +5,72 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="254.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="254.0" style="-fx-background-color: #2e2e2e;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.CalculatorController">
    <children>
-      <Button fx:id="OneButton" layoutX="23.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="1">
+      <Button fx:id="OneButton" layoutX="23.0" layoutY="180.0" mnemonicParsing="false" onAction="#OneButtonPressed" prefHeight="37.0" prefWidth="43.0" text="1">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="TwoButton" layoutX="78.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="2">
+      <Button fx:id="TwoButton" layoutX="78.0" layoutY="180.0" mnemonicParsing="false" onAction="#TwoButtonPressed" prefHeight="37.0" prefWidth="43.0" text="2">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="ThreeButton" layoutX="133.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="3">
+      <Button fx:id="ThreeButton" layoutX="133.0" layoutY="180.0" mnemonicParsing="false" onAction="#ThreeButtonPressed" prefHeight="37.0" prefWidth="43.0" text="3">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="DivideButton" layoutX="188.0" layoutY="180.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="➗" />
-      <Button fx:id="MultiplyButton" layoutX="188.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="✖" />
-      <Button fx:id="SubtractButton" layoutX="188.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="➖" />
-      <Button fx:id="PlusButton" layoutX="188.0" layoutY="315.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="➕" />
-      <Button fx:id="SixButton" layoutX="133.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="6">
+      <Button fx:id="DivideButton" layoutX="188.0" layoutY="180.0" mnemonicParsing="false" onAction="#DivideButtonPressed" prefHeight="37.0" prefWidth="43.0" text="➗" />
+      <Button fx:id="MultiplyButton" layoutX="188.0" layoutY="225.0" mnemonicParsing="false" onAction="#MultiplyButtonPressed" prefHeight="37.0" prefWidth="43.0" text="✖" />
+      <Button fx:id="SubtractButton" layoutX="188.0" layoutY="270.0" mnemonicParsing="false" onAction="#MinusButtonPressed" prefHeight="37.0" prefWidth="43.0" text="➖" />
+      <Button fx:id="PlusButton" layoutX="188.0" layoutY="315.0" mnemonicParsing="false" onAction="#PlusButtonPressed" prefHeight="37.0" prefWidth="43.0" text="➕" />
+      <Button fx:id="SixButton" layoutX="133.0" layoutY="225.0" mnemonicParsing="false" onAction="#SixButtonPressed" prefHeight="37.0" prefWidth="43.0" text="6">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="FiveButton" layoutX="78.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="5">
+      <Button fx:id="FiveButton" layoutX="78.0" layoutY="225.0" mnemonicParsing="false" onAction="#FiveButtonPressed" prefHeight="37.0" prefWidth="43.0" text="5">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="FourButton" layoutX="23.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="4">
+      <Button fx:id="FourButton" layoutX="23.0" layoutY="225.0" mnemonicParsing="false" onAction="#FourButtonPressed" prefHeight="37.0" prefWidth="43.0" text="4">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="SevenButton" layoutX="23.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="7">
+      <Button fx:id="SevenButton" layoutX="23.0" layoutY="270.0" mnemonicParsing="false" onAction="#SevenButtonPressed" prefHeight="37.0" prefWidth="43.0" text="7">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="EightButton" layoutX="78.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="8">
+      <Button fx:id="EightButton" layoutX="78.0" layoutY="270.0" mnemonicParsing="false" onAction="#EightButtonPressed" prefHeight="37.0" prefWidth="43.0" text="8">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="NineButton" layoutX="133.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="9">
+      <Button fx:id="NineButton" layoutX="133.0" layoutY="270.0" mnemonicParsing="false" onAction="#NineButtonPressed" prefHeight="37.0" prefWidth="43.0" text="9">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="EqualsButton" layoutX="133.0" layoutY="315.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="43.0" text="=">
+      <Button fx:id="EqualsButton" layoutX="133.0" layoutY="315.0" mnemonicParsing="false" onAction="#EuqalsButtonPressed" prefHeight="37.0" prefWidth="43.0" text="=">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="ZeroButton" layoutX="23.0" layoutY="315.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="98.0" text="0">
+      <Button fx:id="ZeroButton" layoutX="23.0" layoutY="315.0" mnemonicParsing="false" onAction="#ZeroButtonPressed" prefHeight="37.0" prefWidth="98.0" text="0">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Text fx:id="ResultLabel" layoutX="199.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+      <Text fx:id="ResultLabel" fill="WHITE" layoutX="199.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
          <font>
             <Font size="40.0" />
          </font>
       </Text>
-      <Text fx:id="OperationLabel" layoutX="196.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+1">
+      <Text fx:id="OperationLabel" fill="WHITE" layoutX="196.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1+1">
          <font>
             <Font size="14.0" />
          </font>
