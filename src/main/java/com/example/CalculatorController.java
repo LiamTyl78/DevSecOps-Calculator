@@ -7,7 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
-@SuppressWarnings("")
 public class CalculatorController {
     @FXML
     private Button DivideButton;
@@ -45,7 +44,7 @@ public class CalculatorController {
     private Button ZeroButton;
 
     private StringBuilder input = new StringBuilder();
-    private int result, opsPerformed, previousOp = -1;
+    private int leftOperand, previousOp = -1, rightOperand;
     private boolean performingOp;
 
     public CalculatorController(){
@@ -107,7 +106,7 @@ public class CalculatorController {
     
     @FXML
     void EuqalsButtonPressed(ActionEvent event) {
-        
+        performOperation(4);
     }
      
     @FXML
@@ -144,32 +143,37 @@ public class CalculatorController {
 
     private void performOperation(int mode){
         performingOp = true;
-        if (opsPerformed > 0) {
-            if (input.length() > 0) {
+        if (previousOp != -1) {
+            if (input.length() > 0 || mode == 4) {
+                if (input.length() > 0) {
+                    rightOperand = Integer.parseInt(input.toString());
+                    input.setLength(0);
+                }
                 if (previousOp == 0) {
-                    result = result + Integer.parseInt(input.toString());
-                    ResultLabel.setText(String.valueOf(result));
+                    leftOperand = leftOperand + rightOperand;
+                    ResultLabel.setText(String.valueOf(leftOperand));
                 }
                 if (previousOp == 1) {
-                    result = result - Integer.parseInt(input.toString());
-                    ResultLabel.setText(String.valueOf(result));
+                    leftOperand = leftOperand - rightOperand;
+                    ResultLabel.setText(String.valueOf(leftOperand));
                 }
                 if (previousOp == 2) {
-                    result = result * Integer.parseInt(input.toString());
-                    ResultLabel.setText(String.valueOf(result));
+                    leftOperand = leftOperand * rightOperand;
+                    ResultLabel.setText(String.valueOf(leftOperand));
                 }
                 if (previousOp == 3) {
-                    result = result / Integer.parseInt(input.toString());
-                    ResultLabel.setText(String.valueOf(result));
+                    leftOperand = leftOperand / rightOperand;
+                    ResultLabel.setText(String.valueOf(leftOperand));
                 }
-                    input.setLength(0);
+                
 
             }
         }
         else{
-            result = Integer.parseInt(input.toString());
+            leftOperand = Integer.parseInt(input.toString());
         }
-        opsPerformed++;
-        previousOp = mode;
+        if (mode != 4) {
+            previousOp = mode;
+        }
     }
 }
