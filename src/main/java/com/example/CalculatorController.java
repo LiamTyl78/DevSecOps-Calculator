@@ -45,7 +45,7 @@ public class CalculatorController {
     private Button ZeroButton;
 
     private StringBuilder input = new StringBuilder();
-    private int result, opsPerformed;
+    private int result, opsPerformed, previousOp = -1;
     private boolean performingOp;
 
     public CalculatorController(){
@@ -145,26 +145,31 @@ public class CalculatorController {
     private void performOperation(int mode){
         performingOp = true;
         if (opsPerformed > 0) {
-            if (mode == 0) {
-                result = result + Integer.parseInt(input.toString());
-                ResultLabel.setText(String.valueOf(result));
-            }
-            if (mode == 1) {
-                result = result - Integer.parseInt(input.toString());
-                ResultLabel.setText(String.valueOf(result));
-            }
-            if (mode == 2) {
-                result = result * Integer.parseInt(input.toString());
-                ResultLabel.setText(String.valueOf(result));
-            }
-            if (mode == 3) {
-                result = result / Integer.parseInt(input.toString());
-                ResultLabel.setText(String.valueOf(result));
+            if (input.length() > 0) {
+                if (previousOp == 0) {
+                    result = result + Integer.parseInt(input.toString());
+                    ResultLabel.setText(String.valueOf(result));
+                }
+                if (previousOp == 1) {
+                    result = result - Integer.parseInt(input.toString());
+                    ResultLabel.setText(String.valueOf(result));
+                }
+                if (previousOp == 2) {
+                    result = result * Integer.parseInt(input.toString());
+                    ResultLabel.setText(String.valueOf(result));
+                }
+                if (previousOp == 3) {
+                    result = result / Integer.parseInt(input.toString());
+                    ResultLabel.setText(String.valueOf(result));
+                }
+                    input.setLength(0);
+
             }
         }
         else{
             result = Integer.parseInt(input.toString());
         }
         opsPerformed++;
+        previousOp = mode;
     }
 }
