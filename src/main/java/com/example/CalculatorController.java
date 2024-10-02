@@ -9,6 +9,8 @@ import javafx.scene.text.TextAlignment;
 
 public class CalculatorController {
     @FXML
+    private Button ClearButton;
+    @FXML
     private Button DivideButton;
     @FXML
     private Button EightButton;
@@ -44,7 +46,8 @@ public class CalculatorController {
     private Button ZeroButton;
 
     private StringBuilder input = new StringBuilder();
-    private int leftOperand, previousOp = -1, rightOperand;
+    private double leftOperand = 0, rightOperand = 0;
+    private int previousOp = -1;
     private boolean performingOp;
 
     public CalculatorController(){
@@ -128,6 +131,10 @@ public class CalculatorController {
     void DivideButtonPressed(ActionEvent event) {
         performOperation(3);
     }
+    @FXML
+    void ClearButtonPressed(ActionEvent event){
+        clear();
+    }
     
     private void addDidget(char didget){
         if (performingOp) {
@@ -146,34 +153,45 @@ public class CalculatorController {
         if (previousOp != -1) {
             if (input.length() > 0 || mode == 4) {
                 if (input.length() > 0) {
-                    rightOperand = Integer.parseInt(input.toString());
+                    rightOperand = Double.parseDouble(input.toString());
                     input.setLength(0);
                 }
-                if (previousOp == 0) {
-                    leftOperand = leftOperand + rightOperand;
-                    ResultLabel.setText(String.valueOf(leftOperand));
-                }
-                if (previousOp == 1) {
-                    leftOperand = leftOperand - rightOperand;
-                    ResultLabel.setText(String.valueOf(leftOperand));
-                }
-                if (previousOp == 2) {
-                    leftOperand = leftOperand * rightOperand;
-                    ResultLabel.setText(String.valueOf(leftOperand));
-                }
-                if (previousOp == 3) {
-                    leftOperand = leftOperand / rightOperand;
-                    ResultLabel.setText(String.valueOf(leftOperand));
-                }
+                switch (previousOp) {
+                    case 0:
+                        leftOperand = leftOperand + rightOperand;
+                        break;
+                    case 1:
+                        leftOperand = leftOperand - rightOperand;
+                        break;
+                    case 2:
+                        leftOperand = leftOperand * rightOperand;
+                        break;
+                    case 3:
+                        leftOperand = leftOperand / rightOperand;
+                        break;
+                    default:
+                        break;
+                    }
+                ResultLabel.setText(String.valueOf(leftOperand));
                 
-
             }
         }
         else{
-            leftOperand = Integer.parseInt(input.toString());
+            if (input.length()>0) {
+                leftOperand = Double.parseDouble(input.toString());
+                
+            }
         }
         if (mode != 4) {
             previousOp = mode;
         }
+    }
+
+    private void clear(){
+        previousOp = -1;
+        leftOperand = 0;
+        rightOperand = 0;
+        input.setLength(0);
+        ResultLabel.setText("0");
     }
 }
