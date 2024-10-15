@@ -21,7 +21,7 @@
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <GridPane layoutX="26.0" layoutY="134.0" prefHeight="172.0" prefWidth="212.0">
+      <GridPane layoutX="21.0" layoutY="169.0" prefHeight="172.0" prefWidth="212.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="53.0" minWidth="53.0" prefWidth="53.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="53.0" minWidth="53.0" prefWidth="53.0" />
@@ -84,9 +84,14 @@
             </Button>
             <Button fx:id="SubtractButton" mnemonicParsing="false" onAction="#MinusButtonPressed" prefHeight="37.0" prefWidth="43.0" text="➖" GridPane.columnIndex="3" GridPane.rowIndex="3" />
             <Button fx:id="ClearButton" mnemonicParsing="false" onAction="#ClearButtonPressed" prefHeight="37.0" prefWidth="43.0" text="Clear" GridPane.columnIndex="3" />
+            <Button fx:id="SqrtButton" mnemonicParsing="false" onAction="#SqrRtButtonPressed" prefHeight="37.0" prefWidth="43.0" text="√" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
          </children>
       </GridPane>
-      <GridPane layoutX="27.0" layoutY="302.0" maxWidth="50.0" prefHeight="49.0" prefWidth="270.0">
+      <GridPane layoutX="22.0" layoutY="337.0" maxWidth="50.0" prefHeight="49.0" prefWidth="270.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="106.0" prefWidth="106.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="53.0" minWidth="53.0" prefWidth="53.0" />

@@ -22,11 +22,13 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
+            <classifier>win</classifier>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
+            <classifier>win</classifier>
         </dependency>
     </dependencies>
 
@@ -48,6 +50,21 @@
                     <addModules>javafx.controls,javafx.fxml</addModules> <!-- Added module configuration -->
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <executable>java</executable>
+                <arguments>
+                    <argument>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</argument>
+                    <argument>-cp</argument>
+                    <argument>target/classes:target/dependency/*</argument>
+                    <argument>com.example.CalculatorGUI</argument> <!-- Replace with your main class -->
+                </arguments>
+                <mainClass>com.example.CalculatorGUI</mainClass>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
 </project>

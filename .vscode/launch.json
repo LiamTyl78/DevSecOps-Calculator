@@ -4,11 +4,28 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        {
+            "name": "Maven JavaFX Run",
+            "type": "java",
+            "request": "launch",
+            "preLaunchTask": "Run Maven JavaFX in Debug Mode",
+            "mainClass": "com.example.CalculatorGUI",
+            "console": "integratedTerminal",
+        },
         {
             "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
+        },
+        {
+            "name": "Attach to JavaFX App",
+            "type": "java",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005,  // The same port as in your pom.xml
+            "timeout": 30000
         },
         {
             "type": "java",
@@ -17,6 +34,6 @@
             "mainClass": "com.example.CalculatorGUI",
             "projectName": "calculator",
             "vmArgs": "--module-path \"src/main/java/com/example/javafx-sdk-20.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
-        }
+        },
     ]
 }

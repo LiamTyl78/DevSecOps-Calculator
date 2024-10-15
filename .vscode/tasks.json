@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run Maven JavaFX in Debug Mode",
+        "type": "shell",
+        "command": "mvn exec:java",
+        "args": [],
+        "problemMatcher": [],
+        "detail": "Run JavaFX application using Maven with debugging enabled"
+      }
+    ]
+  }
+  
